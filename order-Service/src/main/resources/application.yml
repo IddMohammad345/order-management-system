@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-Service
+    name: order-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql:///iddmohammad
@@ -19,9 +19,7 @@ spring:
 server:
   port: 8083
 
-product:
-  service:
-    url: http://localhost:8082
-user:
-  service:
-    url: http://localhost:8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
